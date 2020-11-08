@@ -9,14 +9,20 @@ fpga_led_pio[5] <= niosLab2:u0.leds_export[5]
 
 
 |LAB2_FPGA_NIOS|niosLab2:u0
-clk_clk => clk_clk.IN7
-leds_export[0] <= niosLab2_pio_0:pio_0.out_port
-leds_export[1] <= niosLab2_pio_0:pio_0.out_port
-leds_export[2] <= niosLab2_pio_0:pio_0.out_port
-leds_export[3] <= niosLab2_pio_0:pio_0.out_port
-leds_export[4] <= niosLab2_pio_0:pio_0.out_port
-leds_export[5] <= niosLab2_pio_0:pio_0.out_port
-reset_reset_n => _.IN1
+clk_clk => niosLab2_jtag_uart_0:jtag_uart_0.clk
+clk_clk => niosLab2_nios2_gen2_0:nios2_gen2_0.clk
+clk_clk => niosLab2_onchip_memory2_0:onchip_memory2_0.clk
+clk_clk => niosLab2_pio_0:pio_0.clk
+clk_clk => niosLab2_mm_interconnect_0:mm_interconnect_0.clk_0_clk_clk
+clk_clk => niosLab2_irq_mapper:irq_mapper.clk
+clk_clk => altera_reset_controller:rst_controller.clk
+leds_export[0] <= niosLab2_pio_0:pio_0.out_port[0]
+leds_export[1] <= niosLab2_pio_0:pio_0.out_port[1]
+leds_export[2] <= niosLab2_pio_0:pio_0.out_port[2]
+leds_export[3] <= niosLab2_pio_0:pio_0.out_port[3]
+leds_export[4] <= niosLab2_pio_0:pio_0.out_port[4]
+leds_export[5] <= niosLab2_pio_0:pio_0.out_port[5]
+reset_reset_n => altera_reset_controller:rst_controller.reset_in0
 
 
 |LAB2_FPGA_NIOS|niosLab2:u0|niosLab2_jtag_uart_0:jtag_uart_0
@@ -1486,7 +1492,7 @@ i_readdata[29] => i_readdata[29].IN1
 i_readdata[30] => i_readdata[30].IN1
 i_readdata[31] => i_readdata[31].IN1
 i_waitrequest => i_waitrequest.IN1
-irq[0] => ~NO_FANOUT~
+irq[0] => W_ipending_reg_nxt.IN1
 irq[1] => ~NO_FANOUT~
 irq[2] => ~NO_FANOUT~
 irq[3] => ~NO_FANOUT~
@@ -5212,7 +5218,7 @@ debugaccess => write_strobe.IN0
 monitor_error => oci_reg_readdata.DATAB
 monitor_go => oci_reg_readdata.DATAB
 monitor_ready => oci_reg_readdata.DATAB
-reset_n => oci_ienable[0]~reg0.ACLR
+reset_n => oci_ienable[0]~reg0.PRESET
 reset_n => oci_ienable[1]~reg0.ACLR
 reset_n => oci_ienable[2]~reg0.ACLR
 reset_n => oci_ienable[3]~reg0.ACLR
@@ -5247,6 +5253,7 @@ reset_n => oci_ienable[31]~reg0.ACLR
 reset_n => oci_single_step_mode~reg0.ACLR
 write => write_strobe.IN1
 writedata[0] => ocireg_mrs.DATAIN
+writedata[0] => oci_ienable[0]~reg0.DATAIN
 writedata[1] => ocireg_ers.DATAIN
 writedata[2] => ~NO_FANOUT~
 writedata[3] => oci_single_step_mode~reg0.DATAIN
@@ -23346,7 +23353,8 @@ reset_n => ~NO_FANOUT~
 |LAB2_FPGA_NIOS|niosLab2:u0|niosLab2_irq_mapper:irq_mapper
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
-sender_irq[0] <= <GND>
+receiver0_irq => sender_irq[0].DATAIN
+sender_irq[0] <= receiver0_irq.DB_MAX_OUTPUT_PORT_TYPE
 sender_irq[1] <= <GND>
 sender_irq[2] <= <GND>
 sender_irq[3] <= <GND>

@@ -6,7 +6,7 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
    element clk_0
@@ -57,6 +57,14 @@
          type = "int";
       }
    }
+   element onchip_memory2_0.s1
+   {
+      datum baseAddress
+      {
+         value = "32768";
+         type = "String";
+      }
+   }
    element pio_0
    {
       datum _sortIndex
@@ -87,7 +95,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="Lab1_FPGA_RTL.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
@@ -196,7 +204,7 @@
   <parameter name="instruction_master_high_performance_paddr_size" value="0" />
   <parameter name="instruction_master_paddr_base" value="0" />
   <parameter name="instruction_master_paddr_size" value="0" />
-  <parameter name="internalIrqMaskSystemInfo" value="0" />
+  <parameter name="internalIrqMaskSystemInfo" value="1" />
   <parameter name="io_regionbase" value="0" />
   <parameter name="io_regionsize" value="0" />
   <parameter name="master_addr_map" value="false" />
@@ -416,6 +424,13 @@
    version="18.1"
    start="clk_0.clk"
    end="onchip_memory2_0.clk1" />
+ <connection
+   kind="interrupt"
+   version="18.1"
+   start="nios2_gen2_0.irq"
+   end="jtag_uart_0.irq">
+  <parameter name="irqNumber" value="0" />
+ </connection>
  <connection
    kind="reset"
    version="18.1"

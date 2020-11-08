@@ -17,12 +17,11 @@ Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
 Info: niosLab2.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
-Warning: niosLab2.jtag_uart_0: Interrupt sender jtag_uart_0.irq is not connected to an interrupt receiver
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate /home/labarqcomp/SoC-e-Linux-Embarcados/Lab2_FPGA_NIOS/niosLab2.qsys --synthesis=VERILOG --output-directory=/home/labarqcomp/SoC-e-Linux-Embarcados/Lab2_FPGA_NIOS/niosLab2/synthesis --family="Cyclone V" --part=5CSXFC6D6F31C6
+Info: qsys-generate /home/labarqcomp/SoC-e-Linux-Embarcados/Lab2_FPGA_NIOS/niosLab2.qsys --synthesis=VHDL --output-directory=/home/labarqcomp/SoC-e-Linux-Embarcados/Lab2_FPGA_NIOS/niosLab2/synthesis --family="Cyclone V" --part=5CSXFC6D6F31C6
 Progress: Loading Lab2_FPGA_NIOS/niosLab2.qsys
 Progress: Reading input file
 Progress: Adding clk_0 [clock_source 18.1]
@@ -40,19 +39,18 @@ Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
 Info: niosLab2.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
-Warning: niosLab2.jtag_uart_0: Interrupt sender jtag_uart_0.irq is not connected to an interrupt receiver
 Info: niosLab2: Generating niosLab2 "niosLab2" for QUARTUS_SYNTH
 Info: jtag_uart_0: Starting RTL generation for module 'niosLab2_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=niosLab2_jtag_uart_0 --dir=/tmp/alt8507_1492787899333325260.dir/0002_jtag_uart_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8507_1492787899333325260.dir/0002_jtag_uart_0_gen//niosLab2_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=niosLab2_jtag_uart_0 --dir=/tmp/alt8526_6841088510187671690.dir/0002_jtag_uart_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8526_6841088510187671690.dir/0002_jtag_uart_0_gen//niosLab2_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart_0: Done RTL generation for module 'niosLab2_jtag_uart_0'
 Info: jtag_uart_0: "niosLab2" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: nios2_gen2_0: "niosLab2" instantiated altera_nios2_gen2 "nios2_gen2_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'niosLab2_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=niosLab2_onchip_memory2_0 --dir=/tmp/alt8507_1492787899333325260.dir/0003_onchip_memory2_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8507_1492787899333325260.dir/0003_onchip_memory2_0_gen//niosLab2_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=niosLab2_onchip_memory2_0 --dir=/tmp/alt8526_6841088510187671690.dir/0003_onchip_memory2_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8526_6841088510187671690.dir/0003_onchip_memory2_0_gen//niosLab2_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory2_0: Done RTL generation for module 'niosLab2_onchip_memory2_0'
 Info: onchip_memory2_0: "niosLab2" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
 Info: pio_0: Starting RTL generation for module 'niosLab2_pio_0'
-Info: pio_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=niosLab2_pio_0 --dir=/tmp/alt8507_1492787899333325260.dir/0004_pio_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8507_1492787899333325260.dir/0004_pio_0_gen//niosLab2_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/bin/perl -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64/perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=niosLab2_pio_0 --dir=/tmp/alt8526_6841088510187671690.dir/0004_pio_0_gen/ --quartus_dir=/home/labarqcomp/intelFPGA/18.1/quartus --verilog --config=/tmp/alt8526_6841088510187671690.dir/0004_pio_0_gen//niosLab2_pio_0_component_configuration.pl  --do_build_sim=0  ]
 Info: pio_0: Done RTL generation for module 'niosLab2_pio_0'
 Info: pio_0: "niosLab2" instantiated altera_avalon_pio "pio_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
@@ -63,16 +61,16 @@ Info: mm_interconnect_0: "niosLab2" instantiated altera_mm_interconnect "mm_inte
 Info: irq_mapper: "niosLab2" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "niosLab2" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'niosLab2_nios2_gen2_0_cpu'
-Info: cpu:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64//eperlcmd -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64//perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=niosLab2_nios2_gen2_0_cpu --dir=/tmp/alt8507_1492787899333325260.dir/0007_cpu_gen/ --quartus_bindir=/home/labarqcomp/intelFPGA/18.1/quartus/linux64/ --verilog --config=/tmp/alt8507_1492787899333325260.dir/0007_cpu_gen//niosLab2_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2020.09.02 19:05:28 (*) Starting Nios II generation
-Info: cpu: # 2020.09.02 19:05:28 (*)   Checking for plaintext license.
-Info: cpu: # 2020.09.02 19:05:31 (*)   Plaintext license not found.
-Info: cpu: # 2020.09.02 19:05:31 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2020.09.02 19:05:31 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2020.09.02 19:05:31 (*)   Creating all objects for CPU
-Info: cpu: # 2020.09.02 19:05:32 (*)   Generating RTL from CPU objects
-Info: cpu: # 2020.09.02 19:05:32 (*)   Creating plain-text RTL
-Info: cpu: # 2020.09.02 19:05:32 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec /home/labarqcomp/intelFPGA/18.1/quartus/linux64//eperlcmd -I /home/labarqcomp/intelFPGA/18.1/quartus/linux64//perl/lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/europa -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin/perl_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/sopc_builder/bin -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/labarqcomp/intelFPGA/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=niosLab2_nios2_gen2_0_cpu --dir=/tmp/alt8526_6841088510187671690.dir/0007_cpu_gen/ --quartus_bindir=/home/labarqcomp/intelFPGA/18.1/quartus/linux64/ --verilog --config=/tmp/alt8526_6841088510187671690.dir/0007_cpu_gen//niosLab2_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2020.09.21 17:51:39 (*) Starting Nios II generation
+Info: cpu: # 2020.09.21 17:51:39 (*)   Checking for plaintext license.
+Info: cpu: # 2020.09.21 17:52:12 (*)   Plaintext license not found.
+Info: cpu: # 2020.09.21 17:52:12 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2020.09.21 17:52:12 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2020.09.21 17:52:12 (*)   Creating all objects for CPU
+Info: cpu: # 2020.09.21 17:52:13 (*)   Generating RTL from CPU objects
+Info: cpu: # 2020.09.21 17:52:13 (*)   Creating plain-text RTL
+Info: cpu: # 2020.09.21 17:52:14 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'niosLab2_nios2_gen2_0_cpu'
 Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"

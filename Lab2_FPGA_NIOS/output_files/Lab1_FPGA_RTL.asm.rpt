@@ -1,5 +1,5 @@
 Assembler report for Lab1_FPGA_RTL
-Wed Sep  2 19:16:14 2020
+Mon Sep 21 17:56:55 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -38,7 +38,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Sep  2 19:16:14 2020 ;
+; Assembler Status      ; Successful - Mon Sep 21 17:56:55 2020 ;
 ; Revision Name         ; Lab1_FPGA_RTL                         ;
 ; Top-level Entity Name ; LAB2_FPGA_NIOS                        ;
 ; Family                ; Cyclone V                             ;
@@ -77,8 +77,8 @@ refer to the applicable agreement for further details.
 +----------------+----------------------------+
 ; Option         ; Setting                    ;
 +----------------+----------------------------+
-; JTAG usercode  ; 0x018391AF                 ;
-; Checksum       ; 0x018391AF                 ;
+; JTAG usercode  ; 0x0183DA2E                 ;
+; Checksum       ; 0x0183DA2E                 ;
 +----------------+----------------------------+
 
 
@@ -88,14 +88,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Wed Sep  2 19:16:01 2020
+    Info: Processing started: Mon Sep 21 17:55:40 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab1_FPGA_RTL -c Lab1_FPGA_RTL
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1000 megabytes
-    Info: Processing ended: Wed Sep  2 19:16:14 2020
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 993 megabytes
+    Info: Processing ended: Mon Sep 21 17:56:55 2020
+    Info: Elapsed time: 00:01:15
+    Info: Total CPU time (on all processors): 00:00:07
 
 
