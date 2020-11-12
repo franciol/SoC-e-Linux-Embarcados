@@ -1,0 +1,43 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <h2> The Button is <div id="btn_i"></div>
+    </h2>
+    <form method="post" action="/">
+        <input type="submit" value="Blink" name="Blink" />
+    </form>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("btn_i").innerHTML =
+                        this.responseText;
+                }
+            };
+            xhttp.open("GET", "/button", true);
+            xhttp.send();
+        }
+
+        var myint = setInterval(loadDoc, 700);
+
+        function stop_refresh() {
+            clearInterval(myint);
+        }
+        function start_refresh() {
+            clearInterval(myint);
+            myint = setInterval(loadDoc, 700);
+        }
+    </script>
+
+</body>
+
+</html>
