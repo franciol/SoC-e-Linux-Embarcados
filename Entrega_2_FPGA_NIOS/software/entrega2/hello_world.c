@@ -57,25 +57,25 @@ int main(void){
 		IOWR_ALTERA_AVALON_PIO_DATA(PIO_1_BASE, n);
 
 		if (en){
-		  if (dir){
+			if (dir){
 
-			  if (step <= 3){
+				if (step <= 3){
 				  IOWR_32DIRECT(PIO_2_BASE, 0, 0x01 << step++);
 				  usleep(velocidade[vel]);
 			  }
 			  else{
 				  step = 0;
 			  }
-		}
-		else{
-		  if (step >= 0){
-			  IOWR_32DIRECT(PIO_2_BASE, 0, 0x01 << step--);
-			  usleep(velocidade[vel]);
-		  }
-		  else{
-			  step = 3;
-		  }
-		}
+			}
+			else{
+			  if (step >= 0){
+				  IOWR_32DIRECT(PIO_2_BASE, 0, 0x01 << step--);
+				  usleep(velocidade[vel]);
+			  }
+			  else{
+				  step = 3;
+			  }
+			}
 		}
 
 	};

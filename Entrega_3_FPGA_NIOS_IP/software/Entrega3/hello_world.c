@@ -18,10 +18,12 @@ int main(void){
   motor_vel(p_motor, 30000000);
   motor_init(p_motor);
 
-  for (int i = 0; i< 20000;i++){
+  for (int i = 0; i< 2000000;i++){
 	  printf(motor_en(p_motor));
 	  printf("\n");
+
   }
+  motor_halt(p_motor);
 
 
 
